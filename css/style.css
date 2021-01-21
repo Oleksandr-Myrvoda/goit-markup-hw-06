@@ -722,7 +722,8 @@ header {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.button-close:hover {
+.modal-form-block .button-close:hover,
+.modal-form-block .button-close:focus {
   fill: var(--accent-color);
 }
 
@@ -800,13 +801,13 @@ textarea {
   padding: 12px 16px;
 }
 
-.form-field:hover .form-input,
-.form-field:focus .form-input {
+.form .form-input:hover,
+.form .form-input:focus {
   border: 1px solid var(--accent-color);
 }
 
-.form-field:hover .icon-modal-field,
-.form-field:focus .icon-modal-field {
+.form input:hover ~ svg,
+.form input:focus ~ svg {
   fill: var(--accent-color);
 }
 
@@ -952,6 +953,12 @@ textarea {
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
   background: #2f303a;
+
+  font-size: 16px;
+  line-height: 1.25px;
+  letter-spacing: 0.03em;
+
+  color: rgba(255, 255, 255, 0.6);
 }
 
 .form-field-footer input::placeholder {
